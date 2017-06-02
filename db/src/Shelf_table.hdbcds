@@ -1,0 +1,14 @@
+namespace Shelfmaster.db;
+
+context Shelf_table {
+   entity Shelf {
+      key Shelf_id          : String(5) not null;
+          Shelf_description : String(256);
+          Height            : DecimalFloat;
+          Width             : DecimalFloat;
+          Depth             : DecimalFloat;
+          Dimensions_unit   : String(2);
+          Max_load          : DecimalFloat;
+          Max_Load_unit     : String(2);
+   };
+};

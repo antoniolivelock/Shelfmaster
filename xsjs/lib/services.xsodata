@@ -1,0 +1,6 @@
+service namespace "Shelfmaster.db" {
+    "Shelfmaster.db::Shelf_table.Shelf" as "Shelf" key ("Shelf_id") 
+//        create forbidden 
+//        update forbidden 
+        delete forbidden;
+}

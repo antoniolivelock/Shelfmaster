@@ -1,0 +1,82 @@
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic" controllerName="shelfmaster.ui.controller.Detail">
+
+	<semantic:DetailPage id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}" title="Display Shelf Master Data" busy="{detailView>/busy}" busyIndicatorDelay="{detailView>/delay}">
+
+		<semantic:content>
+			<ObjectHeader id="objectHeader" title="{Shelf_description}" numberUnit="{Dimensions_unit}" intro="{Shelf_id}">
+			</ObjectHeader>
+			<IconTabBar id="iconTabBar" class="sapUiResponsiveContentPadding">
+				<items>
+					<IconTabFilter id="iconTabBarFilter1" icon="sap-icon://hint" tooltip="{i18n>detailIconTabBarInfo}">
+					<content>
+					    <Table noDataText="Drop column list items here and columns in the area above" id="__table0">
+					        <items>
+					            <ColumnListItem counter="0" id="__item0">
+					                <cells>
+					                    <Text text="Shelf ID" maxLines="0" id="__text6"/>
+					                    <Text text="{Shelf_id}" maxLines="0" id="__text7"/></cells>
+					            </ColumnListItem>
+					            <ColumnListItem counter="0" id="__item1">
+					                <cells>
+					                    <Text text="Shelf Description" maxLines="0" id="__text9"/>
+					                    <Text text="{Shelf_description}" maxLines="0" id="__text10"/></cells>
+					            </ColumnListItem>
+					            <ColumnListItem xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic" counter="0" id="__item1_copy">
+					                <cells>
+					                    <Text text="Height" maxLines="0" id="__text9_copy"/>
+					                    <Text text="{Height} {Dimensions_unit}" maxLines="0" id="__text10_copy"/>
+					                    </cells>
+					                
+					            </ColumnListItem>
+					            <ColumnListItem xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic" counter="0" id="__item1_copy2">
+					                <cells>
+					                    <Text text="Width" maxLines="0" id="__text9_copy2"/>
+					                    <Text text="{Width} {Dimensions_unit}" maxLines="0" id="__text10_copy2"/>
+					                    </cells>
+					                
+					            </ColumnListItem>
+					            <ColumnListItem xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic" counter="0" id="__item1_copy3">
+					                <cells>
+					                    <Text text="Depth" maxLines="0" id="__text9_copy3"/>
+					                    <Text text="{Depth} {Dimensions_unit}" maxLines="0" id="__text10_copy3"/>
+					                    </cells>
+					                
+					            </ColumnListItem>
+					            <ColumnListItem xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic" counter="0" id="__item1_copy4">
+					                <cells>
+					                    <Text text="Max load" maxLines="0" id="__text9_copy4"/>
+					                    <Text text="{Max_load} {Max_Load_unit}" maxLines="0" id="__text10_copy4"/>
+					                    </cells>
+					                
+					            </ColumnListItem></items>
+					        <columns>
+					            <Column id="__column0">
+					                <header>
+					                    <Label text="Property" id="__label0"/>
+					                </header>
+					            </Column>
+					            <Column id="__column1">
+					                <header>
+					                    <Label text="Value" id="__label1"/>
+					                </header>
+					            </Column></columns></Table>
+					</content>
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+
+		</semantic:content>
+
+		<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>
+		</semantic:sendEmailAction>
+
+	<semantic:customFooterContent>
+
+	    <Button id="addButton" icon="sap-icon://add" press="onAdd" />
+
+	</semantic:customFooterContent>
+
+	</semantic:DetailPage>
+
+</mvc:View>

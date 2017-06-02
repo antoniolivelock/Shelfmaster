@@ -1,0 +1,27 @@
+<edmx:Edmx
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
+    <edmx:DataServices
+        xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+        <Schema
+            xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+            xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="Shelfmaster.db">
+            <EntityType Name="ShelfType">
+                <Key>
+                    <PropertyRef Name="Shelf_id"/>
+                </Key>
+                <Property Name="Depth" Type="Edm.Double"/>
+                <Property Name="Dimensions_unit" Type="Edm.String" MaxLength="3"/>
+                <Property Name="Height" Type="Edm.Double"/>
+                <Property Name="Max_Load_unit" Type="Edm.String" MaxLength="3"/>
+                <Property Name="Max_load" Type="Edm.Double"/>
+                <Property Name="Shelf_description" Type="Edm.String" MaxLength="50"/>
+                <Property Name="Shelf_id" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Width" Type="Edm.Double"/>
+            </EntityType>
+            <EntityContainer Name="v2" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="Shelf" EntityType="Shelfmaster.db.ShelfType"/>
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
